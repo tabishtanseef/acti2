@@ -17,7 +17,7 @@ var dataCollection = {
 	},
 	
 	"2": {
-		"image": 'img/items/Uttar_Pradesh.jpg',
+		"image": 'img/items/Punjab.jpg',
 		"answer": "UttarPradesh"
 	},
 	
@@ -37,7 +37,7 @@ var dataCollection = {
 	},
 	
 	"6": {
-		"image": 'img/items/Sikkim.jpg',
+		"image": 'img/items/Punjab.jpg',
 		"answer": "Sikkim"
 	}
 }
