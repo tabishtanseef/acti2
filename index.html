@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drag And Drop</title>
+	<link type="text/css" rel="stylesheet" href="style/main.css" />
+	<link type="text/css" rel="stylesheet" href="style/jquery-ui.css" />
+	<link type="text/css" rel="stylesheet" href="style/font-awesome.min.css" />
+    
+    <script type="text/javascript" src="script/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="script/jquery-ui.js"></script>
+    <script type="text/javascript" src="script/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="script/config.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div class="header">
+    	<div class="pageTitle" id="dvHeader"><span></span></div>
+    </div>
+	
+    <!-- end header -->
+    <div id="containerDiv">
+        <div style="display:none;" id="alertMessage" class="errorMsg"></div>
+        
+        <h2 id="title"><span></span></h2>
+         
+        <div class="clear"></div>
+            
+        <div class="content">
+            <div id="container">
+                <!-- to be filled by json -->
+            </div>
+            
+            <!--======Answer Container====== -->
+            <div id="ansContainer">
+            </div>
+
+            <!--=========== Button========== -->
+            <div class="button">
+                <button class="btn" id="reset" disabled onClick="resetGame()"></button>
+                <button class="btn" id="submit" disabled onClick="checkAnswer()"></button>
+                <button class="btn" id="next" disabled onClick="showAnswer()"></button>
+            </div>
+
+            <div class="pagination"></div>
+        
+        </div>
+        
+    </div>
+</div>
+
+<div id="audioContainerDiv">
+        
+</div>
+
+
+<script>
+
+$(document).ready(function() {
+    boat();
+});
+
+function boat(){
+    $("#boat").css("background-position","0px 0px").animate({right:"+=100%"},10000, function() {
+        $("#boat").css("background-position","0px 0px").animate({right:"-=100%"},10000, boat);
+    });
+}
+</script>
+    
+</body>
+</html>
